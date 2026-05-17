@@ -13,9 +13,12 @@ generators:
 
   triposr:
     repo: stabilityai/TripoSR
-    # Pinned to the latest stable commit at the time of writing. Bump deliberately, never
-    # auto-update to main.
-    revision: ea0080e5559a26ce81c1d34d869fda37c4f3e9c7
+    # PROVISIONAL: I haven't yet captured a verified HF weights commit. The Colab
+    # notebook prints the actual SHA on first successful run — pin that here in
+    # the same commit that adopts this generator for real (M2 exit).
+    # TODO(M2-exit): replace "main" with a real commit hash from
+    #   https://huggingface.co/stabilityai/TripoSR/commits/main
+    revision: main
     min_vram_mb: 6000
     available_in:
       - remote
