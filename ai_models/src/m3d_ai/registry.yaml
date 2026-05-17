@@ -1,0 +1,49 @@
+# Pinned model revisions. NO code is allowed to use revision="main".
+# See docs/DECISIONS/ADR-0003-initial-generator-choice.md.
+
+generators:
+  mock:
+    repo: local/mock
+    revision: mock-fixture-v1
+    min_vram_mb: 0
+    available_in:
+      - mock
+      - remote
+      - local
+
+  triposr:
+    repo: stabilityai/TripoSR
+    # Pinned to the latest stable commit at the time of writing. Bump deliberately, never
+    # auto-update to main.
+    revision: ea0080e5559a26ce81c1d34d869fda37c4f3e9c7
+    min_vram_mb: 6000
+    available_in:
+      - remote
+      - local
+
+  hunyuan3d-2:
+    repo: tencent/Hunyuan3D-2
+    revision: PINNED_IN_M4
+    min_vram_mb: 12000
+    requires_license_acceptance: true
+    available_in:
+      - remote
+      - local
+
+  instantmesh:
+    repo: TencentARC/InstantMesh
+    revision: PINNED_IN_M3
+    min_vram_mb: 8000
+    available_in:
+      - remote
+      - local
+
+evaluators:
+  clip:
+    repo: openai/clip-vit-large-patch14
+    revision: 32bd64288804d66eefd0ccbe215aa642df71cc41
+  dino:
+    repo: facebook/dinov2-base
+    revision: e1cef9bf03c4a3ce2afac0bcdd3c93b3d3a8b8a3
+  lpips:
+    package: lpips==0.1.4

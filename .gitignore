@@ -1,0 +1,56 @@
+# Build artifacts
+node_modules/
+target/
+dist/
+build/
+.next/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.uv/
+*.egg-info/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Project-specific
+temp/
+exports/
+logs/
+models_cache/
+.env
+.env.local
+
+# Tauri
+src-tauri/target/
+src-tauri/Cargo.lock
+
+# Model weights — never commit
+*.safetensors
+*.ckpt
+*.pth
+*.onnx
+*.gguf
+*.bin
+
+# Big media (Git LFS only for test fixtures < 5 MB)
+*.glb
+*.obj
+*.fbx
+*.ply
+!blender/tests/fixtures/*.obj
+!ai_models/fixtures/*.glb
+
+# OS
+Thumbs.db
+desktop.ini
+
+# Claude
+.claude/settings.json
+!.claude/settings.local.json
+!.claude/agents/
